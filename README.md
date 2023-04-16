@@ -3,36 +3,6 @@ Analyzing NYC Parking Violations data and NBA shot logs using PySpark
 # ENGR 516 — Assignment 2
 ### My code report can be found on report.pdf file.       
 
-In ENGR 5950, we have learned the following topics:
-
-1. Set up a 3-node cluster with Hadoop Distributed File System and run examples.
-2. On top of HDFS, set up the cluster with MapReduce programming framework.
-3. Run examples of MapReduce programs.
-4. Scheduling with YARN.
-However, you should have observed that developing an integrative program, which involves
-multiple Maps and Reduces, with MapReduce programming framework is definitely not a trivial
-task. You have to use a loop in the shell program to start the iteration and utilize an indicator to
-stop the loop (Figure 1).
-
-```
-Figure 1: MapReduce based iterative programming
-```
-This challenge is caused by the fact that Hadoop is designed to utilize the storage space in the
-cluster. Each MapReduce program requires to output the data into the disk. This leads to a large
-amount of HDFS reads/writes, which significantly limits the performance.
-
-
-## Spark Programming
-
-The spark system implements the Resilient Distributed Dataset (RDD) to maximize the memory
-space in the cluster. With RDD, most of the operation is done in the memory (Fig. 2).
-
-```
-Figure 2: Hadoop v.s. Spark
-```
-In this project, you are going to design you own Spark programs to analyze the data. To develop
-a Spark program, you just need to transform the previous RDD into a new one for the next
-iteration. You can use any spark related library package in this project.
 
 ## NY Parking Violations
 
@@ -77,27 +47,7 @@ Please analyze the data and answer the following questions:
     able zones. Considering the hit rate, which zone is the best for James Harden, Chris Paul,
     Stephen Curry, and Lebron James. (10 pts)
 
-## Submission
 
-You are expected to upload a zip or tar file by the deadline to Canvas. The zip file should include
-your codes, report, and README.
-
-## Useful Links
-
-1. Analysis of NYC Parking Tickets.
-2. Preliminary Data Visualization.
-3. Exploring 42.3M NYC Parking Tickets.
-4. NY Parking Violations Issued.
-5. Insights From Raw NBA Shot Log Data.
-6. Investigating the hot hand phenomenon in the NBA (CODE).
-7. Parallelizing K-Means-Based Clustering on Spark.
-8. NBA 16-17 regular season shot log.
-9. The Fear Factor.
-10. The Best And Worst Defenders.
-11. NBA Classification.
-12. Stephen Curry’s Decision Tree.
-13. Points per Match (ATL vs WAS only).
-14. Spark Kmeans.
 
 
 
