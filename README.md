@@ -1,6 +1,5 @@
 # PySpark_analysis
 Analyzing NYC Parking Violations data and NBA shot logs using PySpark             
-# ENGR 516 — Assignment 2
 ### My code report can be found on report.pdf file.       
 
 
